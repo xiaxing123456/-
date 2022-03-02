@@ -1,0 +1,65 @@
+@import './normalize.css';
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /* 字体颜色 */
+  --color-text: #666;
+  /* 主题高亮颜色 */
+  --color-high-text: #ff5777;
+  /* 主色调 */
+  --color-tint: #ff8198;
+  /* 背景色 */
+  --color-background: #fff;
+  /* 字体大小 */
+  --font-size: 14px;
+  /* 行高间距 */
+  --line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* 禁止用户鼠标选中页面上的文字/图片等 */
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  background: var(--color-background);
+  color: var(--color-text);
+  width: 100vw;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.clear-fix::after {
+  clear: both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.clear-fix {
+  zoom: 1;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
